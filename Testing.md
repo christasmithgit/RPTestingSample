@@ -24,12 +24,12 @@ Short, isolated tests and are executed against emulators and are focused on beha
 ### What to test?
 - Test the positive case
 - Test negative cases
-- Almost anything can be tested, so when defining the spec, don’t worry about how you will test!
+- Almost anything can be tested, so when defining the spec, donï¿½t worry about how you will test!
 - Test ranges, including null
 - Test conditional and branching logic
-- Don’t try and test framework/platform code
+- Donï¿½t try and test framework/platform code
 - API Validation for example
-- Aim for high test coverage, but know that 100% isn’t achievable
+- Aim for high test coverage, but know that 100% isnï¿½t achievable
 
 ## System Tests
 Checks that the service is able to integrate with its own repositories (i.e. SQL Server).  During these tests, other (remote) repositories are still emulated.
@@ -40,13 +40,13 @@ Acceptance Tests are re-executed to indicate that no emulated repositories are u
 
 ## Smoke & Health Tests
 Smoke testing ensures that the service is hosted correctly and ready for use. It must be run on each environment where the service is deployed and must not change the system. Smoke testing involves a light integration test with Azure AD for authentication Smoke testing examples:
-- Simple “get” transaction where available
+- Simple ï¿½getï¿½ transaction where available
 - Bearer validation: Unauthenticated (no bearer present), valid user bearer, valid app bearer
 - Correct service is hosted (validate version for service and node deployment)
 To support Smoke testing, a Smoke API Controller must be used (/api/smoke).
 
 # Testing a service
-![image.png](/.attachments/image-5c20823e-84d4-42f4-8fd4-8fd4f3d05a99.png)
+![image.png](./Doc/TestingAService)
 
 ## Personal opinion on Mocks vs Stubs vs Emulators(Fakes)
 There is a debate as to whether or not you should use Mocks vs Stubs vs Emulators(Fakes) in testing. In the past I have used fakes and swapped these in and out as needed in both unit and integration tests - I think this works really well.
@@ -63,7 +63,7 @@ Review following document for full information: [Testing in .NET
 - MSTest
 - NUnit
 
-![image.png](/.attachments/image-160419c2-9231-4cf7-9f67-69a5aa07a929.png)
+![image.png](./Doc/ComparisonOfTestF.png)
 
 Suggestion: If I had to say, probably XUnit as Liftr team uses it and its open source but really not sure it matters - but all will work.
 
@@ -74,7 +74,7 @@ SpecFlow is a test automation solution for .NET built upon the BDD paradigm. Use
 SpecFlow tests are written using Gherkin, which allows you to write test cases using natural languages. SpecFlow uses the official Gherkin parser, which supports over 70 languages.
 
 Example test:
-![image.png](/.attachments/image-c9aeb25c-a015-4541-9502-68e5cae40abf.png)
+![image.png](./Doc/ExampleSpecFlow.png)
 
 Pros: 
 - Encourage BDD & closely algins with acceptance criteria/promotion of thinking about what you are actually trying to test
