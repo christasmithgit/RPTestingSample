@@ -46,7 +46,7 @@ Smoke testing ensures that the service is hosted correctly and ready for use. It
 To support Smoke testing, a Smoke API Controller must be used (/api/smoke).
 
 # Testing a service
-![image.png](./Doc/TestingAService)
+![image.png](./Docs/TestingAService.png)
 
 ## Personal opinion on Mocks vs Stubs vs Emulators(Fakes)
 There is a debate as to whether or not you should use Mocks vs Stubs vs Emulators(Fakes) in testing. In the past I have used fakes and swapped these in and out as needed in both unit and integration tests - I think this works really well.
@@ -63,7 +63,7 @@ Review following document for full information: [Testing in .NET
 - MSTest
 - NUnit
 
-![image.png](./Doc/ComparisonOfTestF.png)
+![image.png](./Docs/ComparisonOfTestF.png)
 
 Suggestion: If I had to say, probably XUnit as Liftr team uses it and its open source but really not sure it matters - but all will work.
 
@@ -74,7 +74,7 @@ SpecFlow is a test automation solution for .NET built upon the BDD paradigm. Use
 SpecFlow tests are written using Gherkin, which allows you to write test cases using natural languages. SpecFlow uses the official Gherkin parser, which supports over 70 languages.
 
 Example test:
-![image.png](./Doc/ExampleSpecFlow.png)
+![image.png](./Docs/ExampleSpecFlow.png)
 
 Pros: 
 - Encourage BDD & closely algins with acceptance criteria/promotion of thinking about what you are actually trying to test
