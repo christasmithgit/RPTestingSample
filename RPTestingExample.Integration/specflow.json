@@ -1,0 +1,10 @@
+﻿{
+  "stepAssemblies": [
+    {
+      "assembly": "RPTestingExample.TestCommon"
+    }
+  ],
+  "runtime": {
+    "missingOrPendingStepsOutcome": "Error"
+  }
+}
