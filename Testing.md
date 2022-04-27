@@ -16,9 +16,13 @@ Topics we need to learn
 - Mocking/Stubs/Fakes - whichever we choose
 - Test tool  whichever we choose
 
+
+Considerations
+- .NET 6 changes to set-up/testing
+
 # Suggestions for types of tests to perform
 
-##Unit test
+## Unit test
 Short, isolated tests and are executed against emulators and are focused on behavioural validation (not integration). Unit tests are always mocked or use and emulator.
 
 ### What to test?
@@ -27,7 +31,7 @@ Short, isolated tests and are executed against emulators and are focused on beha
 - Almost anything can be tested, so when defining the spec, don�t worry about how you will test!
 - Test ranges, including null
 - Test conditional and branching logic
-- Don�t try and test framework/platform code
+- Don't try and test framework/platform code
 - API Validation for example
 - Aim for high test coverage, but know that 100% isn�t achievable
 
@@ -68,6 +72,9 @@ Review following document for full information: [Testing in .NET
 Suggestion: If I had to say, probably XUnit as Liftr team uses it and its open source but really not sure it matters - but all will work.
 
 ## Specflow
+Works as an ADDITION to the above - so you choose your flavour or tool and then configure specflow with this - Specflow+XUnit for example.
+
+## What is it
 [Official docs](https://specflow.org/)
 SpecFlow is a test automation solution for .NET built upon the BDD paradigm. Use SpecFlow to define, manage and automatically execute human-readable acceptance tests in .NET projects (Full Framework and .NET Core).
 
@@ -84,6 +91,9 @@ Pros:
 Cons:
 - Another new thing for the team to learn
 - Can be abit fussy to set up/get head around - how much value will we get from this?
+
+### Why do we need it?
+Well, we dont *need* it, but I think its good to make the tests human readable and also encourage you to have a BDD mindset.
 
 Suggestion: I have worked with it before and it can be really good but does require effort. Don't have to use it for both Int and Unit, could choose or not at all.
 
