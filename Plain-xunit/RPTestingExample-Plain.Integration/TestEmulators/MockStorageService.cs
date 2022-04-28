@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace RPTestingExample_Plain.Integration
+namespace RPTestingExample_Plain.Integration.TestEmulators
 {
     public class MockStorageService : IStorageService
     {
