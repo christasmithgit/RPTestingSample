@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using RPTestingExample_PlainXunit.Interfaces;
-using RPTestingExample_PlainXunit.Models;
 
-namespace RPTestingExample_PlainXunit.Controllers
+namespace Net6.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -14,18 +12,15 @@ namespace RPTestingExample_PlainXunit.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IStorageService _storageService;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IStorageService storageService)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
-            _storageService = storageService;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _storageService.AddToStorage("hello");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

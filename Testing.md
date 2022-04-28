@@ -20,10 +20,13 @@ Topics we need to learn
 Considerations
 - .NET 6 changes to set-up/testing
 
+
 # Suggestions for types of tests to perform
 
 ## Unit test
 Short, isolated tests and are executed against emulators and are focused on behavioural validation (not integration). Unit tests are always mocked or use and emulator.
+
+- These will probably use mocks for simplicity
 
 ### What to test?
 - Test the positive case
@@ -35,19 +38,41 @@ Short, isolated tests and are executed against emulators and are focused on beha
 - API Validation for example
 - Aim for high test coverage, but know that 100% isn�t achievable
 
-## System Tests
-Checks that the service is able to integrate with its own repositories (i.e. SQL Server).  During these tests, other (remote) repositories are still emulated.
 
 ## Integration tests
-Checks that the service is able to integration with its own and remote repositories.  No repositories should be emulated during these tests.
-Acceptance Tests are re-executed to indicate that no emulated repositories are used.
 
-## Smoke & Health Tests
-Smoke testing ensures that the service is hosted correctly and ready for use. It must be run on each environment where the service is deployed and must not change the system. Smoke testing involves a light integration test with Azure AD for authentication Smoke testing examples:
-- Simple �get� transaction where available
+Checks that the service is able to integration with its own and remote repositories.  No repositories should be emulated during these tests.
+
+Integration tests in ASP.NET Core require the following:
+
+A test project is used to contain and execute the tests. The test project has a reference to the SUT.
+The test project creates a test web host for the SUT and uses a test server client to handle requests and responses with the SUT.
+A test runner is used to execute the tests and report the test results.
+Integration tests follow a sequence of events that include the usual Arrange, Act, and Assert test steps:
+
+- The SUT's web host is configured.
+- A test server client is created to submit requests to the app.
+- The Arrange test step is executed: The test app prepares a request.
+- The Act test step is executed: The client submits the request and receives the response.
+- The Assert test step is executed: The actual response is validated as a pass or fail based on an expected response.
+- The process continues until all of the tests are executed.
+- The test results are reported.
+
+Usually, the test web host is configured differently than the app's normal web host for the test runs. For example, a different database or different app settings might be used for the tests.
+
+## Smoke/Middlewear Tests
+Smoke testing ensures that the service is hosted correctly and ready for use.
+
+Essentially testing the middleware.
+
+ It must be run on each environment where the service is deployed and must not change the system. Smoke testing involves a light integration test with Azure AD for authentication Smoke testing examples:
+- Simple / transaction where available
 - Bearer validation: Unauthenticated (no bearer present), valid user bearer, valid app bearer
 - Correct service is hosted (validate version for service and node deployment)
 To support Smoke testing, a Smoke API Controller must be used (/api/smoke).
+
+## Health Tetss
+easily can add health endpoints for the system.
 
 # Testing a service
 ![image.png](./Docs/TestingAService.png)

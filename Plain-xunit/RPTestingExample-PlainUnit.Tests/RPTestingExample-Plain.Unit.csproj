@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RPTestingExample-PlainXunit\RPTestingExample-Plain.csproj" />
+  </ItemGroup>
+
 </Project>

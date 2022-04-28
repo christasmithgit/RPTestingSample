@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPTestingExample-PlainXunit", "RPTestingExample-PlainXunit.csproj", "{5ABF0702-BC37-4734-9187-C24AD5F52B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPTestingExample-Plain", "RPTestingExample-Plain.csproj", "{5ABF0702-BC37-4734-9187-C24AD5F52B93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPTestingExample-Plain.Unit", "..\RPTestingExample-PlainUnit.Tests\RPTestingExample-Plain.Unit.csproj", "{B49D69E9-6032-4F00-B392-14341E0E9F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPTestingExample-Plain.Unit", "..\RPTestingExample-PlainUnit.Tests\RPTestingExample-Plain.Unit.csproj", "{B49D69E9-6032-4F00-B392-14341E0E9F6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPTestingExample-Plain.Integration", "..\RPTestingExample-Plain.Integration\RPTestingExample-Plain.Integration.csproj", "{5A653AF8-806F-4F9F-939B-9F16AF955AB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPTestingExample-Plain.Integration", "..\RPTestingExample-Plain.Integration\RPTestingExample-Plain.Integration.csproj", "{5A653AF8-806F-4F9F-939B-9F16AF955AB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
