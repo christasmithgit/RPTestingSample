@@ -4,16 +4,16 @@ This document details the code testing and release strategy for the KXRP Project
 [[_TOC_]]
 
 Decisions
-- What types of tests do we want?
-- What testing framework/tool will we use for these?
-- Do we want to use specflow?
-- Do we want to use code analysis tools?
-- Do we want to do code coverage analysis?
-- Mocks vs Stubs vs Fakes - What do we want?
+- What types of tests do we want? - Unit & Integration to start
+- What testing framework/tool will we use for these? - TBC
+- Do we want to use specflow? - Yes but TBC final decison
+- Do we want to use code analysis tools? - Yes stylecop
+- Do we want to do code coverage analysis? - Yes 70% threshold to start
+- Mocks vs Stubs vs Fakes - What do we want? - Mocks for unit tests (tool tbc)
 
 Topics we need to learn
 - In memory web server testing for .NET [Integration tests in memory](https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-6.0)
-- Mocking/Stubs/Fakes - whichever we choose
+- Mocking/Stubs/Fakes - whichever we choose https://dotnetcoretutorials.com/2021/06/19/mocks-vs-stubs-vs-fakes-in-unit-testing/
 - Test tool  whichever we choose
 
 
